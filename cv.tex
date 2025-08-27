@@ -2,7 +2,7 @@
 %	DOCUMENT DEFINITION
 %----------------------------------------------------------------------------------------
 
-\documentclass[a4paper,10pt]{article} % Reduced font size to 10pt
+\documentclass[a4paper,9pt]{article} % Reduced font size to 9pt for more content
 
 %----------------------------------------------------------------------------------------
 %	FONT
@@ -21,7 +21,7 @@
 \RequirePackage{color}
 \RequirePackage{graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[scale=0.85]{geometry} % Reduced scale for larger margins
+\usepackage[scale=0.8]{geometry} % Further reduced scale for smaller margins
 
 %tabularx environment
 \usepackage{tabularx}
@@ -46,7 +46,7 @@
 %CV Sections inspired by: 
 %http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{6pt}{6pt} % Reduced spacing before and after section title
+\titlespacing{\section}{0pt}{4pt}{4pt} % Reduced spacing before and after section title
 
 %for publications
 \usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
@@ -67,26 +67,26 @@
 
 % job listing environments
 \newenvironment{jobshort}[2]
-    {
-    \begin{tabularx}{\linewidth}{@{}l X r@{}}
-    \textbf{#1} & \hfill &  #2 \\[3.75pt]
-    \end{tabularx}
-    }
-    {
-    }
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    }
+    {
+    }
 
 \newenvironment{joblong}[2]
-    {
-    \begin{tabularx}{\linewidth}{@{}l X r@{}}
-    \textbf{#1} & \hfill &  #2 \\[3.75pt]
-    \end{tabularx}
-    \begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
-    }
-    {
-    \end{itemize}
-    \end{minipage}    
-    }
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    \begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
+    }
+    {
+    \end{itemize}
+    \end{minipage}    
+    }
 
 %----------------------------------------------------------------------------------------
 %	BEGIN DOCUMENT
@@ -101,7 +101,7 @@
 %----------------------------------------------------------------------------------------
 
 \begin{tabularx}{\linewidth}{@{} C @{}}
-\Huge{A}\LARGE{DITYA }\Huge{N}\LARGE{AIR}\\[5pt] % Reduced vertical space below name
+\Huge{A}\LARGE{DITYA }\Huge{N}\LARGE{AIR}\\[3pt] % Further reduced vertical space
 \href{https://github.com/4aditya}{\raisebox{-0.05\height}\faGithub\ 4aditya} \ $|$ \ 
 \href{https://linkedin.com/in/4aditya}{\raisebox{-0.05\height}\faLinkedin\ 4aditya} \ $|$ \ 
 \href{mailto:nairaditya92@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ nairaditya92@gmail.com} \ $|$ \ 
@@ -115,8 +115,8 @@
 \section{Experience}
 \begin{tabularx}{\linewidth}{@{} l r @{}}
 \textbf{Web Developer Intern, J.R and Associates} & {July 4, 2022 – August 8, 2022} \\
-\multicolumn{2}{@{}X@{}}{Borivali, Mumbai}\\[2pt] % Reduced vertical space
-\multicolumn{2}{@{}X@{}}{\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=1.5em] % No space between items
+\multicolumn{2}{@{}X@{}}{Borivali, Mumbai}\\[1pt] % Further reduced vertical space
+\multicolumn{2}{@{}X@{}}{\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=1.5em] 
 \item Developed interactive and responsive websites using HTML, CSS, JavaScript, PHP, and MySQL.
 \item Built dynamic web pages, handled user input, and managed backend data efficiently.
 \item Improved front-end design and database integration skills through real-world projects.
@@ -129,17 +129,17 @@
 \section{Projects}
 
 \begin{tabularx}{\linewidth}{@{} l r @{}}
-\href{https://vgbnd.vercel.app}{\underline{\textbf{Vagabond Inc.}}} \hfill \href{https://github.com/4aditya/vgbnd/} {\raisebox{-0.05\height}\faGithub} & {Jun 2024} \\[2pt] % Reduced vertical space
+\href{https://vgbnd.vercel.app}{\underline{\textbf{Vagabond Inc.}}} \hfill \href{https://github.com/4aditya/vgbnd/} {\raisebox{-0.05\height}\faGithub} & {Jun 2024} \\[1pt] % Further reduced vertical space
 \multicolumn{2}{@{}X@{}}{\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=1.5em]
 \item A full-stack travel discovery and booking platform for campers, trekkers, and adventure seekers across India. Built using the MERN stack with a seamless, responsive UI.
 \item Includes detailed destination pages, interactive booking forms with real-time validations, and a secure authentication system.
 \item Backend supports secure user data and booking storage, along with automatic downloadable receipts.
- \item Highlights handpicked offbeat locations curated for nature and travel enthusiasts.
+\item Highlights handpicked offbeat locations curated for nature and travel enthusiasts.
 \end{itemize}}
 \end{tabularx}
 
 \begin{tabularx}{\linewidth}{@{} l r @{}}
-\href{https://driftlane.vercel.app}{\underline{\textbf{Driftlane}}} \hfill \href{https://github.com/4aditya/driftlane/} {\raisebox{-0.05\height}\faGithub} & {Jul 2025} \\[2pt] % Reduced vertical space
+\href{https://driftlane.vercel.app}{\underline{\textbf{Driftlane}}} \hfill \href{https://github.com/4aditya/driftlane/} {\raisebox{-0.05\height}\faGithub} & {Jul 2025} \\[1pt] % Further reduced vertical space
 \multicolumn{2}{@{}X@{}}{\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=1.5em]
 \item AI-powered adventure planner that generates personalized itineraries and recommendations based on user mood, group type, and budget.
 \item Frontend in Next.js (App Router) and Tailwind CSS with dark-glass UI, filters, and smooth animations.
@@ -150,7 +150,7 @@
 \end{tabularx}
 
 \begin{tabularx}{\linewidth}{@{} l r @{}}
-\href{https://tryelle.vercel.app/}{\underline{\textbf{Tryelle}}} \hfill \href{https://github.com/4aditya/tryelle/} {\raisebox{-0.05\height}\faGithub} & {Aug 2025} \\[2pt] % Reduced vertical space
+\href{https://tryelle.vercel.app/}{\underline{\textbf{Tryelle}}} \hfill \href{https://github.com/4aditya/tryelle/} {\raisebox{-0.05\height}\faGithub} & {Aug 2025} \\[1pt] % Further reduced vertical space
 \multicolumn{2}{@{}X@{}}{\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=1.5em]
 \item A browser-based virtual try-on application that uses MediaPipe to let users try different clothing outfits in real time using their webcam.
 \item Backend in Flask serving Python ML models for key features.
