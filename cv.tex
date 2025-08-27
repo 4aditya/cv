@@ -2,24 +2,14 @@
 %	DOCUMENT DEFINITION
 %----------------------------------------------------------------------------------------
 
-% article class because we want to fully customize the page and not use a cv template
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper,10pt]{article} % Reduced font size to 10pt
 
 %----------------------------------------------------------------------------------------
 %	FONT
 %----------------------------------------------------------------------------------------
 
-% % fontspec allows you to use TTF/OTF fonts directly
-% \usepackage{fontspec}
-% \defaultfontfeatures{Ligatures=TeX}
-
-% % modified for ShareLaTeX use
-% \setmainfont[
-% SmallCapsFont = Fontin-SmallCaps.otf,
-% BoldFont = Fontin-Bold.otf,
-% ItalicFont = Fontin-Italic.otf
-% ]
-% {Fontin.otf}
+\usepackage{fontspec}
+\defaultfontfeatures{Ligatures=TeX}
 
 %----------------------------------------------------------------------------------------
 %	PACKAGES
@@ -31,7 +21,7 @@
 \RequirePackage{color}
 \RequirePackage{graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[scale=0.9]{geometry}
+\usepackage[scale=0.85]{geometry} % Reduced scale for larger margins
 
 %tabularx environment
 \usepackage{tabularx}
@@ -40,7 +30,7 @@
 \usepackage{enumitem}
 
 % centered version of 'X' col. type
-\newcolumntype{C}{>{\centering\arraybackslash}X} 
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
 
 %to prevent spillover of tabular into next pages
 \usepackage{supertabular}
@@ -53,10 +43,10 @@
 \usepackage{multicol}
 \usepackage{multirow}
 
-%CV Sections inspired by: 
+%CV Sections inspired by: 
 %http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{10pt}{10pt}
+\titlespacing{\section}{0pt}{6pt}{6pt} % Reduced spacing before and after section title
 
 %for publications
 \usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
@@ -98,32 +88,23 @@
     \end{minipage}    
     }
 
-
-
 %----------------------------------------------------------------------------------------
 %	BEGIN DOCUMENT
 %----------------------------------------------------------------------------------------
 \begin{document}
 
 % non-numbered pages
-\pagestyle{empty} 
+\pagestyle{empty} 
 
 %----------------------------------------------------------------------------------------
 %	TITLE
 %----------------------------------------------------------------------------------------
 
-% \begin{tabularx}{\linewidth}{ @{}X X@{} }
-% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
-% \raisebox{-0.05\height}\faGithub\ username \ | \
-% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
-% \end{tabularx}
-
 \begin{tabularx}{\linewidth}{@{} C @{}}
-\Huge{A}\LARGE{DITYA }\Huge{N}\LARGE{AIR}\\[7.5pt]
-\href{https://github.com/4aditya}{\raisebox{-0.05\height}\faGithub\ 4aditya} \ $|$ \ 
-\href{https://linkedin.com/in/4aditya}{\raisebox{-0.05\height}\faLinkedin\ 4aditya} \ $|$ \ 
-% \href{https://mysite.com}{\raisebox{-0.05\height}\faGlobe \ mysite.com} \ $|$ \ 
-\href{mailto:nairaditya92@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ nairaditya92@gmail.com} \ $|$ \ 
+\Huge{A}\LARGE{DITYA }\Huge{N}\LARGE{AIR}\\[5pt] % Reduced vertical space below name
+\href{https://github.com/4aditya}{\raisebox{-0.05\height}\faGithub\ 4aditya} \ $|$ \ 
+\href{https://linkedin.com/in/4aditya}{\raisebox{-0.05\height}\faLinkedin\ 4aditya} \ $|$ \ 
+\href{mailto:nairaditya92@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ nairaditya92@gmail.com} \ $|$ \ 
 \href{tel:+918668401243}{\raisebox{-0.05\height}\faMobile \ +91 86684 01243} \\
 \end{tabularx}
 
@@ -131,60 +112,51 @@
 % EXPERIENCE SECTIONS
 %----------------------------------------------------------------------------------------
 
-% %Interests/ Keywords/ Summary
-% \section{Summary}
-% This CV can also be automatically complied and published using GitHub Actions. For details, \href{https://github.com/jitinnair1/autoCV}{click here}.
-
-%Experience
 \section{Experience}
-
 \begin{tabularx}{\linewidth}{@{} l r @{}}
 \textbf{Web Developer Intern, J.R and Associates} & {July 4, 2022 – August 8, 2022} \\
-\multicolumn{2}{@{}X@{}}{Borivali, Mumbai}\\[3.75pt]
-\multicolumn{2}{@{}X@{}}{\begin{itemize}
-    \item Developed interactive and responsive websites using HTML, CSS, JavaScript, PHP, and MySQL.
-    \item Built dynamic web pages, handled user input, and managed backend data efficiently.
-    \item Improved front-end design and database integration skills through real-world projects.
+\multicolumn{2}{@{}X@{}}{Borivali, Mumbai}\\[2pt] % Reduced vertical space
+\multicolumn{2}{@{}X@{}}{\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=1.5em] % No space between items
+\item Developed interactive and responsive websites using HTML, CSS, JavaScript, PHP, and MySQL.
+\item Built dynamic web pages, handled user input, and managed backend data efficiently.
+\item Improved front-end design and database integration skills through real-world projects.
 \end{itemize}}
 \end{tabularx}
 
-% \begin{joblong}{Designation}{Mar 2019 - Jan 2021}
-% \item long long line of blah blah that will wrap when the table fills the column width
-% \item again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah. again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah
-% \end{joblong}
-  
-%Projects
+%----------------------------------------------------------------------------------------
+% PROJECTS
+%----------------------------------------------------------------------------------------
 \section{Projects}
 
 \begin{tabularx}{\linewidth}{@{} l r @{}}
-\href{https://vgbnd.vercel.app}{\underline{\textbf{Vagabond Inc.}}} \hfill \href{https://github.com/4aditya/vgbnd/} {\raisebox{-0.05\height}\faGithub} & {Jun 2024} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{\begin{itemize}
-    \item A full-stack travel discovery and booking platform for campers, trekkers, and adventure seekers across India. Built using the MERN stack with a seamless, responsive UI.
-    \item Includes detailed destination pages, interactive booking forms with real-time validations, and a secure authentication system.
-    \item Backend supports secure user data and booking storage, along with automatic downloadable receipts.
-    \item Highlights handpicked offbeat locations curated for nature and travel enthusiasts.
+\href{https://vgbnd.vercel.app}{\underline{\textbf{Vagabond Inc.}}} \hfill \href{https://github.com/4aditya/vgbnd/} {\raisebox{-0.05\height}\faGithub} & {Jun 2024} \\[2pt] % Reduced vertical space
+\multicolumn{2}{@{}X@{}}{\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=1.5em]
+\item A full-stack travel discovery and booking platform for campers, trekkers, and adventure seekers across India. Built using the MERN stack with a seamless, responsive UI.
+\item Includes detailed destination pages, interactive booking forms with real-time validations, and a secure authentication system.
+\item Backend supports secure user data and booking storage, along with automatic downloadable receipts.
+ \item Highlights handpicked offbeat locations curated for nature and travel enthusiasts.
 \end{itemize}}
 \end{tabularx}
 
 \begin{tabularx}{\linewidth}{@{} l r @{}}
-\href{https://driftlane.vercel.app}{\underline{\textbf{Driftlane}}} \hfill \href{https://github.com/4aditya/driftlane/} {\raisebox{-0.05\height}\faGithub} & {Jul 2025} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{\begin{itemize}
-    \item AI-powered adventure planner that generates personalized itineraries and recommendations based on user mood, group type, and budget.
-    \item Frontend in Next.js (App Router) and Tailwind CSS with dark-glass UI, filters, and smooth animations.
-    \item Backend in Flask serving ML models (TF-IDF + KNN, KMeans, RandomForest) trained on curated datasets.
-    \item Itinerary generation via LLM (Gemini), with dynamic image fetching from Wikipedia.
-    \item Robust fallback handling, modular API design, and adaptive filtering across devices.
+\href{https://driftlane.vercel.app}{\underline{\textbf{Driftlane}}} \hfill \href{https://github.com/4aditya/driftlane/} {\raisebox{-0.05\height}\faGithub} & {Jul 2025} \\[2pt] % Reduced vertical space
+\multicolumn{2}{@{}X@{}}{\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=1.5em]
+\item AI-powered adventure planner that generates personalized itineraries and recommendations based on user mood, group type, and budget.
+\item Frontend in Next.js (App Router) and Tailwind CSS with dark-glass UI, filters, and smooth animations.
+\item Backend in Flask serving ML models (TF-IDF + KNN, KMeans, RandomForest) trained on curated datasets.
+\item Itinerary generation via LLM (Gemini), with dynamic image fetching from Wikipedia.
+\item Robust fallback handling, modular API design, and adaptive filtering across devices.
 \end{itemize}}
 \end{tabularx}
 
 \begin{tabularx}{\linewidth}{@{} l r @{}}
-\href{https://tryelle.vercel.app/}{\underline{\textbf{Tryelle}}} \hfill \href{https://github.com/4aditya/tryelle/} {\raisebox{-0.05\height}\faGithub} & {Aug 2025} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{\begin{itemize}
-    \item A browser-based virtual try-on application that uses MediaPipe to let users try different clothing outfits in real time using their webcam.
-    \item Backend in Flask serving Python ML models for key features.
-    \item No downloads, no installations — just open the browser and try on digital outfits instantly!
-    \item Features include live webcam pose detection, realistic overlay of digital shirts, and a responsive design with Tailwind CSS.
-    \item Built with HTML5, CSS3 (Tailwind), JavaScript (Vanilla), MediaPipe for pose estimation, and Canvas API for rendering.
+\href{https://tryelle.vercel.app/}{\underline{\textbf{Tryelle}}} \hfill \href{https://github.com/4aditya/tryelle/} {\raisebox{-0.05\height}\faGithub} & {Aug 2025} \\[2pt] % Reduced vertical space
+\multicolumn{2}{@{}X@{}}{\begin{itemize}[noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt,leftmargin=1.5em]
+\item A browser-based virtual try-on application that uses MediaPipe to let users try different clothing outfits in real time using their webcam.
+\item Backend in Flask serving Python ML models for key features.
+\item No downloads, no installations — just open the browser and try on digital outfits instantly!
+\item Features include live webcam pose detection, realistic overlay of digital shirts, and a responsive design with Tailwind CSS.
+\item Built with HTML5, CSS3 (Tailwind), JavaScript (Vanilla), MediaPipe for pose estimation, and Canvas API for rendering.
 \end{itemize}}
 \end{tabularx}
 
@@ -198,24 +170,16 @@
 2020 - 2023 & Diploma in Computer Engineering, \textbf{Maharashtra State Board of Technical Education} \\
 & \hfill Percentage: 79.87\%\\
 \end{tabularx}
-%----------------------------------------------------------------------------------------
-%	PUBLICATIONS
-%----------------------------------------------------------------------------------------
-% \section{Publications}
-% \begin{refsection}[citations.bib]
-% \nocite{*}
-% \printbibliography[heading=none]
-% \end{refsection}
 
 %----------------------------------------------------------------------------------------
 %	SKILLS
 %----------------------------------------------------------------------------------------
 \section{Skills}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
-\textbf{Languages:} & \normalsize{JavaScript, Dart, Python, C, R} \\
-\textbf{Frameworks/Libraries:} & \normalsize{Express.js, React.js, Next.js, Node.js, Flutter, Flask, Tailwind CSS} \\
-\textbf{Databases:} & \normalsize{MongoDB, Postgresql, MySQL} \\
-\textbf{Operating Systems:} & \normalsize{Linux} \\
+\textbf{Languages:} & JavaScript, Dart, Python, C, R \\
+\textbf{Frameworks/Libraries:} & Express.js, React.js, Next.js, Node.js, Flutter, Flask, Tailwind CSS \\
+\textbf{Databases:} & MongoDB, Postgresql, MySQL \\
+\textbf{Operating Systems:} & Linux \\
 \end{tabularx}
 
 \vfill
