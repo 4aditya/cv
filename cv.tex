@@ -2,14 +2,24 @@
 %	DOCUMENT DEFINITION
 %----------------------------------------------------------------------------------------
 
-\documentclass[a4paper,10pt]{article} % Reduced font size to 10pt
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,12pt]{article}
 
 %----------------------------------------------------------------------------------------
 %	FONT
 %----------------------------------------------------------------------------------------
 
-\usepackage{fontspec}
-\defaultfontfeatures{Ligatures=TeX}
+% % fontspec allows you to use TTF/OTF fonts directly
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures=TeX}
+
+% % modified for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
 
 %----------------------------------------------------------------------------------------
 %	PACKAGES
@@ -21,7 +31,7 @@
 \RequirePackage{color}
 \RequirePackage{graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[scale=0.85]{geometry} % Reduced scale for larger margins
+\usepackage[scale=0.9]{geometry}
 
 %tabularx environment
 \usepackage{tabularx}
@@ -30,7 +40,7 @@
 \usepackage{enumitem}
 
 % centered version of 'X' col. type
-\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
 
 %to prevent spillover of tabular into next pages
 \usepackage{supertabular}
@@ -43,10 +53,10 @@
 \usepackage{multicol}
 \usepackage{multirow}
 
-%CV Sections inspired by: 
+%CV Sections inspired by: 
 %http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{6pt}{6pt} % Reduced spacing before and after section title
+\titlespacing{\section}{0pt}{10pt}{10pt}
 
 %for publications
 \usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
@@ -69,7 +79,7 @@
 \newenvironment{jobshort}[2]
     {
     \begin{tabularx}{\linewidth}{@{}l X r@{}}
-    \textbf{#1} & \hfill & #2 \\[3.75pt]
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
     \end{tabularx}
     }
     {
@@ -78,14 +88,14 @@
 \newenvironment{joblong}[2]
     {
     \begin{tabularx}{\linewidth}{@{}l X r@{}}
-    \textbf{#1} & \hfill & #2 \\[3.75pt]
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
     \end{tabularx}
     \begin{minipage}[t]{\linewidth}
     \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
     }
     {
     \end{itemize}
-    \end{minipage}
+    \end{minipage}    
     }
 
 %----------------------------------------------------------------------------------------
